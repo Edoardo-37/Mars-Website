@@ -1,0 +1,164 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&display=swap');
+@import "tailwindcss";
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* replaces tailwind.config.js file for theme customization */
+@theme {
+  --breakpoint-lg: 75rem;  /*per far corrispondere i breakpoint tailwind con quelli MUI*/
+  /* colori */
+  --color-orange-300: #e39166;
+  --color-orange-400: #da6d32;
+  --color-orange-500: #d14900;
+  --color-orange-600: #BC4100;
+  --color-orange-700: #A73A00;
+  --color-orange-800: #923300;
+}
+
+:root {
+  /* typography */
+  --headings-text-size-h1: clamp(2.5rem, 6vw, 4rem);
+  --headings-text-size-h2: clamp(2.125rem, 5vw, 3.25rem);
+  --headings-text-size-h3: clamp(1.75rem, 4vw, 2.25rem);
+  --headings-text-size-h4: clamp(1.5rem, 3vw, 2rem);
+  --headings-text-size-h5: clamp(1.25rem, 2vw, 1.5rem);
+  --headings-text-size-h6: clamp(1rem, 1.5vw, 1.25rem);
+  --body-text-size: clamp(1.0625rem, 1.4vw, 1.375rem);
+  --headings-font-family: "Orbitron", sans-serif;
+  --text-font-family: "IBM Plex Sans", sans-serif;
+  /* Spacing */
+  --article-padding: clamp(1.5rem, 5vw, 3rem);
+  /* colors */
+  --black: #121212;
+  --blackTint: #1E1E1E;
+  --primaryText: #F5F5F5;
+  --secondaryText: #CFCFCF;
+  --tertiaryColor: #4A7500;
+  --tertiaryTint: #92ac66;
+}
+
+@layer baseStyles {
+  *:focus-visible {
+    outline: 5px solid #2e8bc0;
+  }
+
+  html,
+  body {
+    background-color: var(--black);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navHeight);
+    font-size: var(--body-text-size);
+  }
+
+  body {
+    padding-top: var(--navHeight, 80px);
+  }
+
+  /* Text Selection Color */
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: #ffffff;
+    background: var(--tertiaryColor);
+  }
+
+  ::selection {
+    color: #ffffff;
+    background: var(--tertiaryColor);
+  }
+}
+
+@layer typography {
+  u {
+    text-underline-offset: 8px;
+  }
+}
+
+@layer images {
+  img[alt] {
+    font-style: italic;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    object-fit: cover;
+  }
+
+  img.not-loaded {
+    opacity: 0.5;
+    filter: blur(4px);
+  }
+
+  img.loaded {
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+/* stili pagine */
+@layer pages {
+  .home,
+  .tecnologieMarte,
+  .rischiViaggioMarte,
+  .viaggioSuMarte,
+  .pericoliDiMarte,
+  .sopravvivenzaSuMarte {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* gestire il background per ogni pagina rendendo bg-position: fixed funzionante su safari */
+  .home::before,
+  .tecnologieMarte::before,
+  .rischiViaggioMarte::before,
+  .viaggioSuMarte::before,
+  .pericoliDiMarte::before,
+  .sopravvivenzaSuMarte::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(/assets/marsBg1.webp);
+  }
+
+  .tecnologieMarte::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/assets/articlesImages/marsBg2.webp);
+  }
+
+  .rischiViaggioMarte::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(/assets/articlesImages/marsBg3.webp);
+  }
+
+  .viaggioSuMarte::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(/assets/articlesImages/marsBg5.webp);
+  }
+
+  .pericoliDiMarte::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(/assets/articlesImages/marsBg4.webp);
+  }
+
+  .sopravvivenzaSuMarte::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(/assets/articlesImages/marsBg6.webp);
+  }
+}
