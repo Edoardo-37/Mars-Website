@@ -13,15 +13,13 @@ function ScrollToSectionButton({ targetId, label, variant = "contained" }) {
         fontWeight: "bold",
         backgroundColor: "var(--color-orange-600)",
         color: "var(--primaryText)",
-        transition: "all 0.5s ease-in-out",
+        transition: "all 1.25s ease-in-out !important",
         "&:hover": {
           backgroundColor: "var(--color-orange-400)",
           boxShadow: "0 0 30px var(--color-orange-800)",
         },
       }}
       data-aos="fade-up"
-      data-aos-duration="2500"
-      data-aos-delay="1500"
     >
       {label}
     </Button>
