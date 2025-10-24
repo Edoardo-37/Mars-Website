@@ -17,7 +17,12 @@ const Footer = () => {
         px: 3,
       }}
     >
-      <Grid container columnSpacing={4} rowSpacing={8} sx={{ xs:{px: 0},  md:{px: 3} }}>
+      <Grid
+        container
+        columnSpacing={4}
+        rowSpacing={8}
+        sx={{ xs: { px: 0 }, md: { px: 3 } }}
+      >
         {/* colonna sinistra: logo e copyright */}
         <Grid size={{ xs: 12, lg: 4 }}>
           <Box display="flex" alignItems="start" flexDirection="column" gap={3}>
@@ -25,7 +30,7 @@ const Footer = () => {
               <Link to="/" title="Torna alla Home">
                 <img
                   className="w-[50px]"
-                  src='/assets/marsLogo.png'
+                  src="/assets/marsLogo.png"
                   alt="Logo di OrbitaMarte"
                   title="Logo di OrbitaMarte"
                 />
@@ -45,8 +50,14 @@ const Footer = () => {
             </Box>
             <Typography variant="body2" color="var(--secondaryText)">
               &copy; {new Date().getFullYear()} OrbitaMarte, tutti i diritti
-              riservati. <br /> ADDETTI ALLA COSTRUZIONE DEL SITO: <br />{" "}
-              Edoardo Massimetti (contributo totale)
+              riservati. <br />
+              <Link
+                to="http://marte.altervista.org/"
+                title="Vai al sito originale"
+                className="hover:tracking-widest hover:underline hover:underline-offset-8 transition-all duration-500 ease-in-out mb-[0.25rem] py-1"
+              >
+                Fonte originale utilizzata per questo sito: marte.altervista.org
+              </Link>
             </Typography>
           </Box>
         </Grid>
