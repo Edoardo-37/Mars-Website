@@ -1,22 +1,22 @@
-# An informative science website - OrbitaMarte
+# Un sito web scientifico informativo - OrbitaMarte
 
-A responsive website with articles made with React + Vite about the Mars Mission with all its challenges.
+Un sito web responsive con articoli realizzati con React + Vite sulla missione su Marte e tutte le sue sfide.
 
 ---
 
-## Technologies and libraries used:
+## Tecnologie e librerie utilizzate:
 
-- **[React](https://reactjs.org/)** - User interface development library.
+- **[React](https://reactjs.org/)** - Libreria per lo sviluppo dell'interfaccia utente.
 
-- **[Vite](https://vitejs.dev/)** - Fast bundler for development and build.
+- **[Vite](https://vitejs.dev/)** - Bundler veloce per sviluppo e build.
 
-- **[Tailwind](https://tailwindcss.com/)** - CSS Framework.
+- **[Tailwind](https://tailwindcss.com/)** - Framework CSS.
 
-- **[MaterialUI](https://mui.com/)** - UI Library with production-ready components.
+- **[MaterialUI](https://mui.com/)** - Libreria UI con componenti pronti per la produzione.
 
-- **[React Router](https://reactrouter.com/home)** - Dependency for routing in a SPA.
+- **[React Router](https://reactrouter.com/home)** - Dipendenza per il routing in una SPA.
 
-- **[AOS - Animate On Scroll](https://michalsnik.github.io/aos/)** - Dependency for animations during page scroll.
+- **[AOS - Animate On Scroll](https://michalsnik.github.io/aos/)** - Dipendenza per le animazioni durante lo scorrimento della pagina.
 
 ---
 
@@ -32,63 +32,63 @@ A responsive website with articles made with React + Vite about the Mars Mission
 <br />
 <div align="left">
 
-![Immagine della struttura del progetto](./)
+![Immagine della struttura del progetto](./docs/struttura-progetto.png)
 
 </div>
 
 ---
 
-### Main pages of the site
+### Come avviare il progetto in locale
 
-#### Home
-
-- Above the fold with CTA.
-- Dynamic navbar which hides on scroll thanks to the `<HideOnScroll />` component, responsive for mobile and also featuring a _return to top button_ displayed by the `<ScrollToTopBtn />` component.
-- Various cards, displayed by the `<InfoCard />` component, which remind to the article they describe.
-- Video section, displayed by the `<VideoSection /> and <VideoEmbed />` components, with 3 introduction videos about the Mars Mission.
-
-#### The articles features
-
-- Progressive reading bar displayed by the `<ReadingProgressBar />` component.
-- The same navbar as Home with all its features.
-- Each article is displayed by the `<ArticlePageLayout />` component. This component takes all the article data like title, introduction, eventual images, paragraphs etc. from the `src/data/ArticlePagesData.jsx ` object arrays where every object is an article.
-
-#### Footer
-
-- It has the same links of the navbar for smoother navigation.
-- Legal notes (**not actually present**).
-
----
-
-### How to start the project locally
-
-1. Make sure you have Node.js installed.
-2. Open the terminal:
+1. Assicurati di aver installato Node.js.
+2. Apri il terminale:
 
 ```bash
 git clone https://github.com/Edoardo-37/Mars-Website.git
-cd Mars-Website (repo name)
+cd Mars-Website (nome repository)
 npm install
 npm run dev
-Open the browser on http://localhost:5173
+Apri il browser su http://localhost:5173
 ```
 
-3. To test the site on your mobile device, go to the `package.json` file > `scripts` object > `dev` key and type `dev --host`, then restart the server with `npm run dev` and copy the address shown.
-4. To stop the server `CTRL + C`.
+3. Per testare il sito sul tuo dispositivo mobile, vai al file `package.json` > oggetto `scripts` > chiave `dev` e digita `dev --host`, quindi riavvia il server con `npm run dev` e copia l'indirizzo mostrato.
+4. Per arrestare il server, premi `CTRL + C`.
 
 ---
 
-### Build for production
+### Pagine principali del sito
 
-Run the command: `npm run build`.
-The `/dist` folder will contain all the optimized files.
+#### Home
+
+- Above the fold con CTA.
+- Barra di navigazione dinamica che si nasconde durante lo scorrimento grazie al componente `<HideOnScroll />`, responsive per dispositivi mobili e dotata anche di un pulsante _ritorna all'inizio_ visualizzato dal componente `<ScrollToTopBtn />`.
+- Diverse schede, visualizzate dal componente `<InfoCard />`, che rimandano all'articolo descritto.
+- Sezione video, visualizzata dai componenti `<VideoSection /> e <VideoEmbed />`, con 3 video introduttivi sulla missione su Marte.
+
+#### Le caratteristiche degli articoli
+
+- Barra di lettura progressiva visualizzata dal componente `<ReadingProgressBar />`.
+- La stessa barra di navigazione della Home con tutte le sue funzionalità.
+- Ogni articolo è visualizzato dal componente `<ArticlePageLayout />`. Questo componente prende tutti i dati dell'articolo come titolo, introduzione, eventuali immagini, paragrafi ecc. dagli array di oggetti `src/data/ArticlePagesData.jsx`, dove ogni oggetto è un articolo.
+
+#### Footer
+
+- Ha gli stessi link della barra di navigazione per una navigazione più fluida.
+- Note legali (**non presenti**).
 
 ---
 
-#### Technical Notes
+### Build per la produzione
 
-- Image loading is handled via Lazy Loading with the `<LazyImageObserver />` component to improve performance.
-- On `./src/theme/theme.jsx` there's a theme file for MUI to avoid repeating the same style properties for some selectors like h1 font family and size.
-- All components are developed with a mobile-first approach.
-- Styles are managed by the Tailwind CSS framework along with some pre-packaged components from the MaterialUI library and general styles in the `src > index.css` file.
-- At the root there's the `./src/Data` folder containing all the object arrays used for mapping dynamic content in various components like articles, nav/InfoLinks etc.
+Eseguire il comando: `npm run build`.
+La cartella `/dist` conterrà tutti i file ottimizzati.
+
+---
+
+#### Note tecniche
+
+- Il caricamento delle immagini viene gestito tramite Lazy Loading con il componente `<LazyImageObserver />` per migliorare le prestazioni.
+- In `./src/theme/theme.jsx` è presente un file tema per MUI per evitare di ripetere le stesse proprietà di stile per alcuni selettori come la famiglia e la dimensione del font h1.
+- Tutti i componenti sono sviluppati con un approccio mobile-first.
+- Gli stili sono gestiti dal framework Tailwind CSS insieme ad alcuni componenti pre-confezionati dalla libreria MaterialUI e agli stili generali nel file `src > index.css`.
+- Alla radice si trova la cartella `./src/Data` che contiene tutti gli array di oggetti utilizzati per mappare i contenuti dinamici in vari componenti come articoli, nav/InfoLink ecc.
