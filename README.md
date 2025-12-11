@@ -3,6 +3,7 @@
 A responsive website with articles made with React + Vite about the Mars Mission with all its challenges.
 
 ---
+
 ## Technologies and libraries used:
 
 - **[React](https://reactjs.org/)** - User interface development library.
@@ -16,26 +17,49 @@ A responsive website with articles made with React + Vite about the Mars Mission
 - **[React Router](https://reactrouter.com/home)** - Dependency for routing in a SPA.
 
 - **[AOS - Animate On Scroll](https://michalsnik.github.io/aos/)** - Dependency for animations during page scroll.
+
+---
+
+**Struttura del progetto**:
+
+- `./public/assets`: cartella con tutte le immagini e video utilizzati.
+- `./styles`: cartella con tutti i fogli di stile.
+- `./src/theme`: cartella con la configurazione dei temi di Material UI
+- `./docs`: cartella con tutte le immagini del sito.
+- `./src/data`: cartella con tutti gli array di oggetti utilizzati per mappare i componenti.
+- `./src/pages`: cartella con tutte le pagine del sito.
+
+<br />
+<div align="left">
+
+![Immagine della struttura del progetto](./)
+
+</div>
+
 ---
 
 ### Main pages of the site
 
 #### Home
+
 - Above the fold with CTA.
-- Dynamic navbar which hides on scroll thanks to the ```<HideOnScroll />```  component, responsive for mobile and also featuring a _return to top button_ displayed by the ```<ScrollToTopBtn />```  component.
-- Various cards, displayed by the ```<InfoCard />```  component, which remind to the article they describe.
-- Video section, displayed by the ```<VideoSection /> and <VideoEmbed />```  components, with 3 introduction videos about the Mars Mission.
+- Dynamic navbar which hides on scroll thanks to the `<HideOnScroll />` component, responsive for mobile and also featuring a _return to top button_ displayed by the `<ScrollToTopBtn />` component.
+- Various cards, displayed by the `<InfoCard />` component, which remind to the article they describe.
+- Video section, displayed by the `<VideoSection /> and <VideoEmbed />` components, with 3 introduction videos about the Mars Mission.
 
 #### The articles features
-- Progressive reading bar displayed by the ```<ReadingProgressBar />``` component.
+
+- Progressive reading bar displayed by the `<ReadingProgressBar />` component.
 - The same navbar as Home with all its features.
-- Each article is displayed by the ```<ArticlePageLayout />``` component. This component takes all the article data like title, introduction, eventual images, paragraphs etc. from the ```src/data/ArticlePagesData.jsx ``` object arrays where every object is an article.
+- Each article is displayed by the `<ArticlePageLayout />` component. This component takes all the article data like title, introduction, eventual images, paragraphs etc. from the `src/data/ArticlePagesData.jsx ` object arrays where every object is an article.
 
 #### Footer
+
 - It has the same links of the navbar for smoother navigation.
 - Legal notes (**not actually present**).
 
 ---
+
 ### How to start the project locally
 
 1. Make sure you have Node.js installed.
@@ -48,16 +72,21 @@ npm install
 npm run dev
 Open the browser on http://localhost:5173
 ```
+
 3. To test the site on your mobile device, go to the `package.json` file > `scripts` object > `dev` key and type `dev --host`, then restart the server with `npm run dev` and copy the address shown.
 4. To stop the server `CTRL + C`.
 
 ---
+
 ### Build for production
+
 Run the command: `npm run build`.
 The `/dist` folder will contain all the optimized files.
 
 ---
+
 #### Technical Notes
+
 - Image loading is handled via Lazy Loading with the `<LazyImageObserver />` component to improve performance.
 - On `./src/theme/theme.jsx` there's a theme file for MUI to avoid repeating the same style properties for some selectors like h1 font family and size.
 - All components are developed with a mobile-first approach.
