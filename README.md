@@ -74,11 +74,11 @@ Apri il browser su http://localhost:5173
 
 Componente ArticlePageLayout
 
-![Immagine del componente <ArticlePageLayout />](./docs/articlePageLayout-JSXCode.png)
+![Immagine del componente <ArticlePageLayout />](/docs/articlePageLayout-JSXCode.png)
 
 Array di Oggetti ArticlePagesData
 
-![Immagine dell'array ArticlePagesData](./docs/articlePagesData-JSXCode.png)
+![Immagine dell'array ArticlePagesData](/docs/articlePagesData-JSXCode.png)
 
 Immagine di un articolo del sito
 
