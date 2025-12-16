@@ -31,7 +31,7 @@ Un sito web responsive con articoli realizzati con React + Vite sulla missione s
 
 <br />
 
-![Immagine della struttura del progetto](./docs/struttura-progetto.png)
+![Immagine della struttura del progetto](docs/struttura-progetto.png)
 
 ---
 
@@ -62,9 +62,9 @@ Apri il browser su http://localhost:5173
 - Diverse schede, visualizzate dal componente `<InfoCard />`, che rimandano all'articolo descritto.
 - Sezione video, visualizzata dai componenti `<VideoSection /> e <VideoEmbed />`, con 3 video introduttivi sulla missione su Marte.
 
-![Immagine della homepage](./docs/DesktopHome1.png)
-![Immagine della sezione con le InfoCard](./docs/DesktopHome2.png)
-![Immagine della sezione video](./docs/DesktopHome3.png)
+![Immagine della homepage](docs/DesktopHome1.png)
+![Immagine della sezione con le InfoCard](docs/DesktopHome2.png)
+![Immagine della sezione video](docs/DesktopHome3.png)
 
 #### Le caratteristiche degli articoli
 
@@ -74,23 +74,23 @@ Apri il browser su http://localhost:5173
 
 Componente ArticlePageLayout
 
-![Immagine del componente <ArticlePageLayout />](/docs/articlePageLayout-JSXCode.png)
+![Immagine del componente <ArticlePageLayout />](docs/articlePageLayout-JSXCode.png)
 
 Array di Oggetti ArticlePagesData
 
-![Immagine dell'array ArticlePagesData](/docs/articlePagesData-JSXCode.png)
+![Immagine dell'array ArticlePagesData](docs/articlePagesData-JSXCode.png)
 
 Immagine di un articolo del sito
 
-![Immagine dell'articolo sulle tecnologie](./docs/Article1.png)
-![Immagine dell'articolo sulle tecnologie](./docs/Article2.png)
+![Immagine dell'articolo sulle tecnologie](docs/Article1.png)
+![Immagine dell'articolo sulle tecnologie](docs/Article2.png)
 
 #### Footer
 
 - Ha gli stessi link della barra di navigazione per una navigazione più fluida.
 - Note legali (**non presenti**).
 
-![Immagine del footer](./docs/footer.png)
+![Immagine del footer](docs/footer.png)
 
 ---
 
